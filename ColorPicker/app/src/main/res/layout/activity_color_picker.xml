@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.james.colorpicker.ColorPickerActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/colorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/color_name"
+        android:inputType="text"
+        android:lines="1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/display"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorValue" />
+
+    <SurfaceView
+        android:id="@+id/display"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="34dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="42dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekRed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorName" />
+
+    <TextView
+        android:id="@+id/colorValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/color_value"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/colorName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekRed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="31dp"
+        android:progressTint="@color/colorRed"
+        android:thumbTint="@color/colorRed"
+        app:layout_constraintBottom_toTopOf="@+id/seekGreen"
+        app:layout_constraintEnd_toStartOf="@+id/textRed"
+        app:layout_constraintStart_toEndOf="@+id/redLabel"
+        app:layout_constraintTop_toBottomOf="@+id/display" />
+
+    <SeekBar
+        android:id="@+id/seekGreen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="33dp"
+        android:progressTint="@color/colorGreen"
+        android:thumbTint="@color/colorGreen"
+        app:layout_constraintBottom_toTopOf="@+id/seekBlue"
+        app:layout_constraintEnd_toStartOf="@+id/textGreen"
+        app:layout_constraintStart_toEndOf="@+id/greenLabel"
+        app:layout_constraintTop_toBottomOf="@+id/seekRed" />
+
+    <SeekBar
+        android:id="@+id/seekBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="31dp"
+        android:progressTint="@color/colorBlue"
+        android:thumbTint="@color/colorBlue"
+        app:layout_constraintBottom_toTopOf="@+id/sendButton"
+        app:layout_constraintEnd_toStartOf="@+id/textBlue"
+        app:layout_constraintStart_toEndOf="@+id/blueLabel"
+        app:layout_constraintTop_toBottomOf="@+id/seekGreen" />
+
+    <TextView
+        android:id="@+id/textRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:text="@string/red_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekRed"
+        app:layout_constraintTop_toTopOf="@+id/seekRed" />
+
+    <TextView
+        android:id="@+id/textGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/green_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekGreen"
+        app:layout_constraintTop_toBottomOf="@+id/textRed" />
+
+    <TextView
+        android:id="@+id/textBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/blue_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekBlue"
+        app:layout_constraintTop_toBottomOf="@+id/textGreen" />
+
+    <TextView
+        android:id="@+id/redLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="19dp"
+        android:layout_marginStart="29dp"
+        android:text="@string/red_label"
+        app:layout_constraintEnd_toStartOf="@+id/seekRed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekRed" />
+
+    <TextView
+        android:id="@+id/greenLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/green_label"
+        app:layout_constraintEnd_toStartOf="@+id/seekGreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekGreen" />
+
+    <TextView
+        android:id="@+id/blueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="27dp"
+        android:text="@string/blue_label"
+        app:layout_constraintEnd_toStartOf="@+id/seekBlue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekBlue" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:text="@string/button_send"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBlue" />
+
+</android.support.constraint.ConstraintLayout>
